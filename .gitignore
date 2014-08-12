@@ -24,3 +24,8 @@ src/Bundle2Vis
 src/KeyMatchFull
 src/RadialUndistort
 src/bundler
+
+#VC
+*.opensdf
+*/Debug/*
+*/Release/*

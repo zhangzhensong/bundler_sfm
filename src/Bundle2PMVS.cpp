@@ -6,6 +6,7 @@
 #include <vector>
 #include <string>
 #include <string.h>
+#include <direct.h>
 
 /* For mkdir */
 #include <sys/stat.h>
@@ -149,7 +150,8 @@ void WritePMVS(const char *output_path,
     int num_cameras = (int) cameras.size();
 
     /* Make sure output_path exists */
-    mkdir(output_path, 0770);
+    //mkdir(output_path, 0770);
+	_mkdir(output_path);
 
     char buf[2048];
     sprintf(buf, "%s/prep_pmvs.sh", output_path);

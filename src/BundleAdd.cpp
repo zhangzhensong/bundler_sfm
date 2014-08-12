@@ -21,6 +21,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+
 #ifndef WIN32
 #include <map>
 #else
@@ -348,7 +349,7 @@ BundlerApp::BundleAdjustAddAllNewPoints(int num_points, int num_cameras,
                                          error, true);
         }
         
-	if (std::isnan(error) || error > max_reprojection_error) {
+	if (isnan(error) || error > max_reprojection_error) {
 	    num_high_reprojection++;
 #if 0
 	    printf(">> Reprojection error [%0.3f] is too large\n", error);
